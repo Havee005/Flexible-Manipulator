@@ -40,3 +40,29 @@ Inspired by nature's most flexible creatures like elephant's trunk and octopuse'
 * The end effector is designed for lifting fragile and brittle objects.
 * It is manufactured by pouring two different liquid silicone rubber (LSR) solutions into a 3D-printed mold.
 * The silicone mold cures in 6 hours, after which it's ready for use.
+
+# 2. Working
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/97b45238-7c25-4b84-9f0f-1fc3e6fcdee7">
+</p>
+
+* The joystick provides input signals to control both the continuum arm and the soft actuators.
+* The microcontroller (Arduino Uno), which is the brain of the system, receives input from the joystick to control the entire robot.
+* The Arduino Uno uses the I2C protocol to communicate with the PCA9685 servo controller, which sends PWM signals to the servo motors to achieve the desired angles.
+* The soft robot end-effectors of the continuum arm are actuated via signals from a switch through the microcontroller.
+* The Arduino Uno acts as the master controlling the PWM controller (slave), using only two wires for communication.
+* The servo motors move the continuum arm to the desired angle in all directions.
+
+## 2.1. Component Description
+
+| Components | Working Parameters |
+| :----: | :----: |
+| Arduino UNO | <ul><li>Operating Voltage - 5 to 12V</li><li>Clock Speed - 16Mhz</li><li>Microprocessor - ATMega328P</li></ul> | 
+| PWM Servoo Controller (PCA9685) |<ul><li>Operating Voltage – 6V</li><li>Servo Controlled - 16 Individual servos</li></ul> |
+| Servo Motor (MG995)| <ul><li>Operating Voltage – 4.8V to 6V</li><li>Stall Torque - 9 kg/cm</li><li>Gear - Metal</li></ul> |
+| Liquid Silicone Rubber | <ul><li>Part No. - 110</li><li>Curing Time - 6 hours</li><li>Mixing Proportion - 1:1</li></ul> |
+| Compressor Machine | <ul><li>Operating Voltage – 12V</li></ul> |
+| Power Supply | <ul><li>Parameter - 350 W SMPS</li></ul> |
+
+# 3. Result
+### 3.1. Servo Motor Control Action Through PCA9685 using Joystick
